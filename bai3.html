@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function casio(val) {
+            var pheptoan=document.frm.ketqua.value;
+            if(val === "AC") {
+                pheptoan = "";
+                document.frm.ketqua.value = pheptoan;
+            }else if(val === "x") {
+                pheptoan+="*";
+                document.frm.ketqua.value = pheptoan;
+            }else if(val === "=") {
+                document.frm.ketqua.value = eval(pheptoan);
+            }else{
+                pheptoan+=val;
+                document.frm.ketqua.value = pheptoan;
+            }
+        }
+    </script>
+    <form name="frm" method="post">
+        <table border="1" cellspacing="1" cellpadding="1">
+            <tr>
+                <td id="menu" colspan="4">
+                    <textarea name="ketqua" id="" cols="30" rows="3" value=""></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="7"/></td>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="8"/></td>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="9"/></td>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="+"/></td>
+            </tr>
+            <tr>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="4"/></td>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="5"/></td>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="6"/></td>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="-"/></td>
+            </tr>
+            <tr>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="1"/></td>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="2"/></td>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="3"/></td>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="x"/></td>
+            </tr>
+            <tr>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="0"/></td>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="AC"/></td>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="="/></td>
+                <td align="center"><input onclick="casio(this.value)" type="button" value="/"/></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

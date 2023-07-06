@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function textBox (val) {
+            if(val === "Nhap vao tu khoa"){
+                document.frm.txt.value = "";
+            }
+            if(val === "") {
+                document.frm.txt.value = "Nhap vao tu khoa";
+            }
+        }
+    </script>
+    <form action="" name="frm">
+        <input onblur="textBox(this.value)" onclick="textBox(this.value)" type="text" name="txt" id="" value="Nhap vao tu khoa">
+        <input type="button" name="search" value="tim kiem">
+    </form>
+</body>
+</html>
